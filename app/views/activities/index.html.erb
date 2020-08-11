@@ -2,6 +2,9 @@
 
 <ul>
   <% @activities.each do |activity| %>
-    <li><%= activity.name %></li>
+    <li><%= link_to activity.name, activity_path(activity.id) %></li>
   <% end %>
 </ul>
+<br>
+<br>
+<%= link_to 'Organize a New Activity', new_activity_path %>

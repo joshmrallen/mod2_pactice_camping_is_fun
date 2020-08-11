@@ -1,0 +1,15 @@
+<h1><%= @camper.name %></h1>
+<h3>Age: <%= @camper.age %> years old</h3>
+<h3><%= @camper.name %>'s current and upcoming activites: </h3>
+<ul>
+    <% @camper.signups.each do |signup| %>
+        <li>
+            <p><%= link_to Activity.find(signup.activity_id).name, activity_path(signup.activity_id) %>: <%= signup.time %> o'clock </p>
+        </li>
+    <% end %>
+</ul>
+
+
+<br>
+<br>
+<p><%= link_to 'Back to Campers Main', campers_path %> | <%= link_to 'Edit Camper', edit_camper_path %></p>

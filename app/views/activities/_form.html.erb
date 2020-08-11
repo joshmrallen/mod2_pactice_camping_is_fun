@@ -1,0 +1,7 @@
+<%= form_for @activity do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+    <%= f.label :difficulty %>
+    <%= f.number_field :difficulty %><br>
+    <%= f.submit %>
+<% end %>
