@@ -1,3 +1,13 @@
+<% if flash[:errors] %>
+    <ul>
+        <% flash[:errors].each do |error| %>
+            <li>
+                <%= error %>
+            </li>
+        <% end %>
+    </ul>
+<% end %>
+
 <h1>Edit Camper Profile</h1>
 <%= render 'form'%>
 <br>
